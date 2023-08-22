@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABC Bank Internet Banking</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header>
+            <div class="flex flex-col items-center justify-center px-6 md:py-5 py-2 mx-auto">
+                <span class="text-2xl font-semibold" >Welcome to</span>
+            <a href="#" class="flex items-center text-5xl font-bold text-red-500 dark:text-white">
+                <img class="mr-2" src="https://abcfanbd.com/images/logo/13.png" alt="logo">
+                Bank    
+            </a>
+            </div>
+        <h2 class="text-center font-bold text-3xl text-red-500 md:mt-6 mt-2">Internet Banking</h2>
+    </header>
+    <main>
+        <!-- Bank Balance  -->
+        <section>
+            <!-- Balance Section -->
+            <div class="grid md:grid-cols-3 md:gap-10 gap-1 w-11/12 mx-auto text-center md:mt-10 mt-4">
+                <div class="text-white rounded-2xl bg-green-400 md:p-10 p-2 ">
+                    <p class="md:text-3xl md:font-semibold">Total Deposited Amount:</p>
+                    <p class="md:text-6xl">$<span id="deposit-total">100</span> </p>
+                </div>
+
+                
+                <div class="text-white rounded-2xl bg-blue-500 md:p-10 p-2 ">
+                    <p class="md:text-3xl md:font-semibold  ">Total Balance:</p>
+                    <p class="md:text-6xl">$<span id="balance-total">80</span> </p>
+                </div>
+
+                <div class="text-white rounded-2xl bg-red-400  md:p-10  ">
+                    <p class="md:text-3xl md:font-semibold">Total withdrawal Amount:</p>
+                    <p class="md:text-6xl">$<span id="withdraw-total">20</span> </p>
+                </div>
+            </div>
+
+            <!-- Deposit & Withdraw section -->
+            <div class="grid md:grid-cols-2 md:gap-10 w-9/12 mx-auto md:mt-10 mt-2 gap-1">
+                <div class=" rounded-2xl bg-green-400 md:p-10 p-2 text-left space-y-3 mx-auto  text-center">
+                    <p class="md:text-3xl md:font-semibold text-white">New Deposit Amount:</p>
+                    <input type="text" name="" id="new-deposit-input" class=" px-2 py-2 w-full text-center rounded-lg block" placeholder="Amount you want here">
+                    <button id="btn-deposit" class="bg-white hover:bg-gray-200 rounded-lg px-5 py-1 md:font-medium md:text-xl text-black">Deposit</button>
+                </div>
+
+                <div class=" rounded-2xl bg-red-400 md:p-10 p-2 text-left space-y-3 mx-auto  text-center">
+                    <p class="md:text-3xl md:font-semibold text-white text-center ">New Withdraw Amount:</p>
+                    <input type="text" name="" id="new-withdraw-input" class="px-2 py-2  w-full rounded-lg block" placeholder="Amount you want here">
+                    <button id="btn-withdraw" class="bg-white hover:bg-gray-200 rounded-lg px-5 py-1 md:font-medium md:text-xl text-black">Withdraw</button>
+                </div>
+            </div>
+
+        </section>
+    </main>
+    <script src="./js/utilities.js"></script>
+    <script src="./js/deposit.js"></script>
+    <script src="./js/withdraw.js"></script>
+</body>
+</html>
